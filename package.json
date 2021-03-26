@@ -9,13 +9,26 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@pnp/polyfill-ie11": "^2.0.1",
+    "@pnp/sp": "^2.0.4"
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "sp-rest-proxy": "^2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "proxy": "node ./proxyserver/api-server.js",
+    "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run start\"",
+    "upload": "node ./deploytools/upload.js",
+    "deploy": "npm run build-re && node ./deploytools/uploadUAT.js && npm run startServers",
+    "uploadUAT": "node ./deploytools/uploadUAT.js",
+    "deployUAT": "npm run build-re && node ./deploytools/uploadUAT.js && npm run startServers"
   },
   "eslintConfig": {
     "extends": [
@@ -23,6 +36,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:8081",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -32,7 +46,8 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
   }
 }
