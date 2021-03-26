@@ -1,4 +1,4 @@
-# Marketing SharePoint Solution Starter Kit
+# SharePoint Create-React-App Solution Starter Kit
 
 This repository serves as a starting point for all React SharePoint interactive solutions.
 The goal is to establish consistency in solution UI design and team member skill sets.
@@ -30,7 +30,7 @@ npm install
 
 #### Configure proxy server:
 
-A proxy server on local development environment is **required** to connect to a **live SharePoint API** environment, circumventing _cross-domain_ issues (See reference diagram at the end).
+A local development proxy server is **required** to connect to a **live SharePoint API** environment, circumventing _cross-domain_ issues (See reference diagram at the end).
 To set up the proxy server:
 
 ```
@@ -48,9 +48,9 @@ npm run proxy
 
 #### Configurations
 
+- rescripts to rename build folder outputs ( tilde to underscore )
 - prettier
 - eslint
-- rescripts to rename build folder outputs ( tilde to underscore )
 
 ### Development
 
