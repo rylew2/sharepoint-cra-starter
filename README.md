@@ -3,7 +3,6 @@
 This repository serves as a starting point for all React SharePoint interactive solutions.
 The goal is to establish consistency in solution UI design and team member skill sets.
 
-
 ## Project Structure
 
 ```
@@ -83,4 +82,4 @@ Project folder are **_not_** viewable through SharePoint "Site Contents" page. T
 
 ## Localhost Proxy:
 
-![Diagram on how proxy server works to circumvent cross-domain call issues](https://github.wellsfargo.com/app-meapp/CommonAccessPortal/blob/master/Documentation/img/ReactDashboard-Servers.png "Servers")
+![Diagram on how proxy server works to circumvent cross-domain call issues](/documentation/sharepoint-cra-starter.jpeg "Servers")
