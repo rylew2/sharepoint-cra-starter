@@ -43,7 +43,7 @@ npm run proxy
 - On premise credentials (NTLM)
 - Site Url: The url to the root of the site to connect to
   ex. http://my-sharepoint-site.com/sites/mysite
-- Your normal windows ad-ent and password (password will be stored encrypted locally and on .gitignore)
+- Your normal windows user login and password (password will be stored encrypted locally and on .gitignore)
 ```
 
 #### Configurations
