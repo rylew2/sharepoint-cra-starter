@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Marketing SharePoint Solution Starter Kit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository serves as a starting point for all React SharePoint interactive solutions.
+The goal is to establish consistency in solution UI design and team member skill sets.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project Structure
 
-### `yarn start`
+```
+SHAREPOINT-CRA-STARTER
+├── config
+│   ├── private.json <-- manually update proxy info here
+├── deploytools
+├── proxyserver
+├── public
+├── src
+├── .env <-- manually set project parameters
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Setting up the project
 
-### `yarn test`
+#### Clone & Install packages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/rylew2/sharepoint-cra-starter.git
+cd sharepoint-cra-starter
+npm install
+```
 
-### `yarn build`
+#### Configure proxy server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A proxy server on local development environment is **required** to connect to a **live SharePoint API** environment, circumventing _cross-domain_ issues (See reference diagram at the end).
+To set up the proxy server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm run proxy
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**On prompts**, use:
 
-### `yarn eject`
+```
+- On premise credentials (NTLM)
+- Site Url: The url to the root of the site to connect to
+  ex. http://my-sharepoint-site.com/sites/mysite
+- Your normal windows ad-ent and password (password will be stored encrypted locally and on .gitignore)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Configurations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- prettier
+- eslint
+- rescripts to rename build folder outputs ( tilde to underscore )
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Development
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Restart the proxy server and the local web server.**
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+npm run startServers
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Deploy to UAT**
 
-### `yarn build` fails to minify
+```
+npm run deployUAT
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Deploy to PRODUCTION**
+
+```
+npm run deploy
+```
+
+Project folder are **_not_** viewable through SharePoint "Site Contents" page. To see the files, use SharePoint Designer or Windows Explorer.
+
+---
+
+#Reference
+
+## Localhost Proxy:
+
+![Diagram on how proxy server works to circumvent cross-domain call issues](https://github.wellsfargo.com/app-meapp/CommonAccessPortal/blob/master/Documentation/img/ReactDashboard-Servers.png "Servers")
