@@ -33,9 +33,10 @@
     "proxy": "node ./proxyserver/api-server.js",
     "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run start\"",
     "upload": "node ./deploytools/upload.js",
-    "deploy": "npm run build-re && node ./deploytools/uploadUAT.js && npm run startServers",
+    "deploy": "npm run build-re && node ./deploytools/uploadUAT.js",
     "uploadUAT": "node ./deploytools/uploadUAT.js",
-    "deployUAT": "npm run build-re && node ./deploytools/uploadUAT.js && npm run startServers"
+    "deployUAT": "npm run build-re && node ./deploytools/uploadUAT.js",
+    "build-re": "rescripts build"
   },
   "eslintConfig": {
     "extends": [
