@@ -27,6 +27,9 @@ export default class App extends Component {
       },
     });
 
+
+    //Call List
+    
     // let spList = "MyTestList"; //rename to your own list
 
     // let items = await sp.web.lists
@@ -47,23 +50,6 @@ export default class App extends Component {
             <Route path="/sampleroute2" component={SampleRoute2} />
           </Switch>
 
-
-          {/* <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            another link
-          </a>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            another link
-          </a> */}
         </header>
       </div>
     );
