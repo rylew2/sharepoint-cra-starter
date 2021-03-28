@@ -1,3 +1,5 @@
+![Diagram on how proxy server works to circumvent cross-domain call issues](/documentation/sharepoint-cra-starter.jpeg "Servers")
+
 # SharePoint Create-React-App Solution Starter Kit
 
 This repository serves as a starting point for all React SharePoint interactive solutions.
@@ -77,9 +79,3 @@ npm run deploy
 Project folder are **_not_** viewable through SharePoint "Site Contents" page. To see the files, use SharePoint Designer or Windows Explorer.
 
 ---
-
-#Reference
-
-## Localhost Proxy:
-
-![Diagram on how proxy server works to circumvent cross-domain call issues](/documentation/sharepoint-cra-starter.jpeg "Servers")
