@@ -2,8 +2,8 @@
 
 # SharePoint Create-React-App Solution Starter Kit
 
-This repository serves as a starting point for all React SharePoint interactive solutions.
-The goal is to establish consistency in solution UI design and team member skill sets.
+This repository serves as a starting point for some of our React SharePoint interactive solutions.
+The goal is to establish consistency in solution development, deployment, and design.
 
 ## Project Structure
 
