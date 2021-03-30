@@ -1,5 +1,8 @@
 ![Diagram on how proxy server works to circumvent cross-domain call issues](/documentation/sharepoint-cra-starter.jpeg "Servers")
 
+
+You can view a full guide about [setting this project up here](https://rylew.co/projects/sharepoint-react)
+
 # SharePoint Create-React-App Solution Starter Kit
 
 This repository serves as a starting point for some of our React SharePoint interactive solutions.
